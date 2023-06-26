@@ -1,0 +1,14 @@
+@use '../abstracts/vars.scss' as a;
+
+.inactive {
+    display: none;
+}
+
+.error-state {
+    background-color: a.$error-state;
+    border: 1px, solid a.$error-text;
+    color: a.$error-text;
+    &:focus {
+        outline: 1px a.$error-text solid;
+    }
+}

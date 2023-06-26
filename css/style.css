@@ -1,3 +1,5 @@
+/*Fonts-sizes mobile*/
+/*Colors*/
 * {
   margin: 0;
   padding: 0;
@@ -19,18 +21,16 @@ main {
   height: 100%;
 }
 
-.sign-up {
+.sign-up-container {
   width: 100%;
   height: 100%;
   font-size: 1.6rem;
 }
-
-.img-container {
+.sign-up-container__img {
   width: 100%;
   height: 40%;
 }
-
-.sign-up-container {
+.sign-up-container__container {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -39,12 +39,12 @@ main {
   padding: 20px;
   gap: 20px;
 }
-.sign-up-container h1 {
+.sign-up-container__container h1 {
   font-size: 4rem;
   font-weight: 700;
   color: #232742;
 }
-.sign-up-container p {
+.sign-up-container__container p {
   font-weight: 400;
   color: #62626e;
 }
@@ -75,9 +75,12 @@ main {
   width: 100%;
   height: 50px;
   padding-left: 20px;
-  font-size: 1.6rem;
   border-radius: 6px;
   border: 1px #d5d5d5 solid;
+}
+.sign-up-container__input input::placeholder {
+  font-size: 1.6rem;
+  color: #d5d5d5;
 }
 
 .success-container {
@@ -88,7 +91,6 @@ main {
   padding: 50px 20px;
   align-items: end;
 }
-
 .success-container__info {
   display: flex;
   flex-direction: column;
@@ -113,29 +115,37 @@ main {
   font-size: 1.6rem;
 }
 
+.attribution-container {
+  justify-self: end;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.attribution-container a {
+  color: hsl(228, 45%, 44%);
+}
+
 .main-button {
   width: 100%;
   height: 60px;
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   background-color: #232742;
   border-radius: 6px;
   border: none;
 }
 
-.attribution {
-  justify-self: end;
-  font-size: 11px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 .inactive {
   display: none;
+}
+
+.error-state {
+  background-color: #ffe8e6;
+  border: 1px, solid #f09391;
+  color: #f09391;
+}
+.error-state:focus {
+  outline: 1px #f09391 solid;
 }
 
 /*# sourceMappingURL=style.css.map */

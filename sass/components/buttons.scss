@@ -1,0 +1,11 @@
+@use '../abstracts/vars.scss' as a;
+
+.main-button {
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    color: a.$light-color;
+    background-color: a.$secondary-color;
+    border-radius: 6px;
+    border: none;
+}
