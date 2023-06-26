@@ -14,10 +14,19 @@ body {
     width: 100%;
     height: auto;
     font-family: a.$principal-font;
+    @include a.media-up(lg){
+        background-color: #36384d;   
+    }
 }
 
 main {
     width: 100%;
     height: 100%;
+    @include a.media-up(lg){
+        display: grid;  
+        place-content: center;
+        max-width: 1444px;
+        height: 100vh;
+        margin: 0 auto;
+    }
 }
-

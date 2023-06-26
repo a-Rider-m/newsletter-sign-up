@@ -8,4 +8,13 @@
     background-color: a.$secondary-color;
     border-radius: 6px;
     border: none;
+    @include a.media-up(lg) {
+        &:hover {
+            cursor: pointer;
+            background: rgb(255,82,123);
+            box-shadow: 0px 19px 48px -13px rgba(255,62,131,0.51);
+            -webkit-box-shadow: 0px 19px 48px -13px rgba(255,62,131,0.51);
+            -moz-box-shadow: 0px 19px 48px -13px rgba(255,62,131,0.51);
+        }    
+    }
 }

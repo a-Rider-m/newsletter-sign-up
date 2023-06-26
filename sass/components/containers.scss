@@ -4,9 +4,24 @@
     width: 100%;
     height: 100%;
     font-size: a.$primary-text-size;
+    @include a.media-up(lg){
+        display: grid;
+        grid-template-areas: 
+        'sign img'
+        'sign img'
+        'sign img'
+        'atri atri';
+        padding: 20px;
+        background-color: white;  
+        border-radius: 20px;
+    }
     &__img {
         width: 100%;
         height: 40%;
+        @include a.media-up(lg){
+            grid-area: img;
+            height: 100%;
+        }
     }
     &__container {
         display: flex;
@@ -20,12 +35,20 @@
             font-size: a.$title-size;
             font-weight: 700;
             color: a.$secondary-text-color;
+            @include a.media-up(lg) {
+                font-size: a.$title-desk;
+            }
         }
         p {
             font-weight: 400;
             color: a.$primary-text-color;
         }
-        
+        @include a.media-up(lg){
+            grid-area: sign;   
+            width: 90%;
+            justify-content: center;
+            justify-self: center;
+        }
     }
     &__check-list {
         display: flex;
@@ -55,9 +78,14 @@
             padding-left: 20px;
             border-radius: 6px;
             border: 1px a.$tertiary-text-color solid;
+            font-size: a.$primary-text-size;
             &::placeholder {
                 font-size: a.$primary-text-size;
                 color: a.$tertiary-text-color;
+            }
+            &:focus{
+                font-size: a.$primary-text-size;
+                outline: 1px solid a.$secondary-color;
             }
         }
     }
@@ -70,16 +98,24 @@
     height: 95vh;
     padding: 50px 20px;
     align-items: end;
+    @include a.media-up(lg) {
+        width: 480px;
+        height: auto;
+        padding: 50px;
+        background-color: a.$light-color;
+        border-radius: 30px;
+    }
     &__info {
         display: flex;
         flex-direction: column;
-        align-content: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
-        min-height: 350px;
         gap: 40px;
-        span {
-            display: inline-block;
+        @include a.media-up(lg) {
+            gap: 10px;
+        }
+        div {
             width: 70px;
             height: 70px;
             background-image: url('../assets/images/icon-success.svg');
@@ -88,6 +124,10 @@
         }
         h2 {
             font-size: a.$title-size;
+            color: a.$secondary-text-color;
+            @include a.media-up(lg) {
+                font-size: a.$title-desk;
+            }
         }
         p {
             font-size: a.$primary-text-size;
@@ -102,5 +142,10 @@
     margin-bottom: 20px; 
     a { 
         color: hsl(228, 45%, 44%); 
+    }
+    @include a.media-up(lg) {
+        grid-area: atri;
+        place-self: center;
+        margin: 10px 0;
     }
 }

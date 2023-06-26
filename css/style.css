@@ -15,10 +15,24 @@ body {
   height: auto;
   font-family: "Roboto", sans-serif;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: #36384d;
+  }
+}
 
 main {
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    place-content: center;
+    max-width: 1444px;
+    height: 100vh;
+    margin: 0 auto;
+  }
 }
 
 .sign-up-container {
@@ -26,9 +40,24 @@ main {
   height: 100%;
   font-size: 1.6rem;
 }
+@media screen and (min-width: 1024px) {
+  .sign-up-container {
+    display: grid;
+    grid-template-areas: "sign img" "sign img" "sign img" "atri atri";
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+  }
+}
 .sign-up-container__img {
   width: 100%;
   height: 40%;
+}
+@media screen and (min-width: 1024px) {
+  .sign-up-container__img {
+    grid-area: img;
+    height: 100%;
+  }
 }
 .sign-up-container__container {
   display: flex;
@@ -44,9 +73,22 @@ main {
   font-weight: 700;
   color: #232742;
 }
+@media screen and (min-width: 1024px) {
+  .sign-up-container__container h1 {
+    font-size: 5rem;
+  }
+}
 .sign-up-container__container p {
   font-weight: 400;
   color: #62626e;
+}
+@media screen and (min-width: 1024px) {
+  .sign-up-container__container {
+    grid-area: sign;
+    width: 90%;
+    justify-content: center;
+    justify-self: center;
+  }
 }
 .sign-up-container__check-list {
   display: flex;
@@ -77,10 +119,15 @@ main {
   padding-left: 20px;
   border-radius: 6px;
   border: 1px #d5d5d5 solid;
+  font-size: 1.6rem;
 }
 .sign-up-container__input input::placeholder {
   font-size: 1.6rem;
   color: #d5d5d5;
+}
+.sign-up-container__input input:focus {
+  font-size: 1.6rem;
+  outline: 1px solid #232742;
 }
 
 .success-container {
@@ -91,17 +138,29 @@ main {
   padding: 50px 20px;
   align-items: end;
 }
+@media screen and (min-width: 1024px) {
+  .success-container {
+    width: 480px;
+    height: auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 30px;
+  }
+}
 .success-container__info {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 350px;
   gap: 40px;
 }
-.success-container__info span {
-  display: inline-block;
+@media screen and (min-width: 1024px) {
+  .success-container__info {
+    gap: 10px;
+  }
+}
+.success-container__info div {
   width: 70px;
   height: 70px;
   background-image: url("../assets/images/icon-success.svg");
@@ -110,6 +169,12 @@ main {
 }
 .success-container__info h2 {
   font-size: 4rem;
+  color: #232742;
+}
+@media screen and (min-width: 1024px) {
+  .success-container__info h2 {
+    font-size: 5rem;
+  }
 }
 .success-container__info p {
   font-size: 1.6rem;
@@ -124,6 +189,13 @@ main {
 .attribution-container a {
   color: hsl(228, 45%, 44%);
 }
+@media screen and (min-width: 1024px) {
+  .attribution-container {
+    grid-area: atri;
+    place-self: center;
+    margin: 10px 0;
+  }
+}
 
 .main-button {
   width: 100%;
@@ -133,6 +205,15 @@ main {
   background-color: #232742;
   border-radius: 6px;
   border: none;
+}
+@media screen and (min-width: 1024px) {
+  .main-button:hover {
+    cursor: pointer;
+    background: rgb(255, 82, 123);
+    box-shadow: 0px 19px 48px -13px rgba(255, 62, 131, 0.51);
+    -webkit-box-shadow: 0px 19px 48px -13px rgba(255, 62, 131, 0.51);
+    -moz-box-shadow: 0px 19px 48px -13px rgba(255, 62, 131, 0.51);
+  }
 }
 
 .inactive {
