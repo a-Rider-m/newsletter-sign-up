@@ -140,6 +140,9 @@
         }
         p {
             font-size: a.$primary-text-size;
+            .email-registered {
+                font-weight: 700;
+            }
         }
     }
 }

@@ -187,6 +187,9 @@ main {
 .success-container__info p {
   font-size: 1.6rem;
 }
+.success-container__info p .email-registered {
+  font-weight: 700;
+}
 
 .attribution-container {
   justify-self: end;

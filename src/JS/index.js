@@ -8,6 +8,7 @@ const dismissButton = document.querySelector('.dismiss-button');
 
 const inputEmail = document.querySelector("#email-input");
 const errorPara = document.querySelector('.sign-up-container__error-text');
+const emailRegistered = document.querySelector('.email-registered');
 
 
 subsButton.addEventListener('click', validateEmail);
@@ -45,6 +46,7 @@ form.addEventListener('submit', (e)=> {
     e.preventDefault();
 
     let formValido = true;
+    let email = inputEmail.value;
 
     if(!inputEmail.value) {
         formValido = false;
@@ -57,6 +59,7 @@ form.addEventListener('submit', (e)=> {
         return;
     }else {
         submitSuccess()
+        emailRegistered.innerText = email;
     }
 });  
 
