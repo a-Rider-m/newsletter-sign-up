@@ -39,12 +39,13 @@
 					<p>And much more!</p>
 				</div>
 				
-				<div class="sign-up-container__input">
-					<label for="email-input">Email address</label>
+				<form class="sign-up-container__input" action="#">
+					<div>
+						<label for="email-input">Email address</label>
+						<p class="sign-up-container__error-text"></p>
+					</div>
 					<input class="" id="email-input" type="text" placeholder="email@company.com">
-				</div>
-				<form action="index.html">
-					<button formaction="index.html" class="main-button">Subscribe to monthly newsletter</button>
+					<input type="submit" value="Subscribe to monthly newsletter" class="main-button">
 				</form>
 			</div>
 			<div class="attribution-container">
@@ -59,15 +60,24 @@
 				<p>A confirmation email has been send to <strong>ash@loremcompany.com</strong>.
 				Please open it and click the button inside  to confirm your subscription.</p>
 			</div>
-			<button type="button" class="main-button">Dismiss message</button>
+			<button type="button" class="main-button dismiss-button">Dismiss message</button>
 		</div>
 	</main>
+	<script src="./src/JS/index.js"></script>
 	<!--
 		1. Organizar las variables y ponerlas 🗸
 		2. Crear los estilos para errores 🗸
-		3. Version de escritorio 🗸 *falta corregir imagen svg*
+		3. Version de escritorio  *falta corregir imagen svg*
 		4. Estados hover 🗸
 		5. Modularizar el código 🗸
+		6. Crear Js 🗸
+		7. Validador de correo electronico
+		8. Impedir que se continue si el correo es erroneo
+		9. Mostrar error si el correo es erroneo
+		10. Mostrar porqué es el error
+		11. En caso de poner un correo correcto quitar el estado de error
+		12. Seguir a la pantalla de success
+		13. Cuando se le de click al boton de dissmiss recargar pagina 
 	-->
 </body>
 </html>

@@ -68,9 +68,18 @@
         flex-direction: column;
         gap: 10px;
         margin-top: 15px;
-        label {
-            font-size: 1.4rem;
-            color: a.$secondary-text-color;
+        div {
+            display: flex;
+            justify-content: space-between;
+           
+            label {
+                font-size: 1.4rem;
+                color: a.$secondary-text-color;
+            }
+            p {
+                font-size: 1.4rem;
+                color: a.$error-text;
+            }
         }
         input {
             width: 100%;

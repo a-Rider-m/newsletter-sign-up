@@ -109,9 +109,17 @@ main {
   gap: 10px;
   margin-top: 15px;
 }
-.sign-up-container__input label {
+.sign-up-container__input div {
+  display: flex;
+  justify-content: space-between;
+}
+.sign-up-container__input div label {
   font-size: 1.4rem;
   color: #232742;
+}
+.sign-up-container__input div p {
+  font-size: 1.4rem;
+  color: #f09391;
 }
 .sign-up-container__input input {
   width: 100%;
