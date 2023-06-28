@@ -43,6 +43,7 @@ main {
 @media screen and (min-width: 1024px) {
   .sign-up-container {
     display: grid;
+    grid-template-columns: 3fr 2fr;
     grid-template-areas: "sign img" "sign img" "sign img" "atri atri";
     padding: 20px;
     background-color: white;
@@ -51,12 +52,20 @@ main {
 }
 .sign-up-container__img {
   width: 100%;
-  height: 40%;
+  height: 30vh;
+  background-image: url("../../assets/images/illustration-sign-up-mobile.svg");
+  background-position: center;
+  background-repeat: none;
+  border-radius: 0px 0px 20px 20px;
 }
 @media screen and (min-width: 1024px) {
   .sign-up-container__img {
     grid-area: img;
+    width: 100%;
     height: 100%;
+    background-image: url("../../assets/images/illustration-sign-up-desktop.svg");
+    background-position: right;
+    border-radius: 20px;
   }
 }
 .sign-up-container__container {
@@ -125,6 +134,7 @@ main {
   width: 100%;
   height: 50px;
   padding-left: 20px;
+  margin-bottom: 15px;
   border-radius: 6px;
   border: 1px #d5d5d5 solid;
   font-size: 1.6rem;
