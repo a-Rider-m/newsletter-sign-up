@@ -25,19 +25,19 @@ function validateEmail() {
     let expression = expressions.email;
 
     if (input == "") {
-        inputEmail.classList.add('error-state');
+        inputEmail.classList.add('input-error');
         errorPara.innerText = "Can't be blank";
     }
     else if(!input.value == "") {
-        inputEmail.classList.add('error-state');
+        inputEmail.classList.add('input-error');
         errorPara.innerText = "";
     }
     else if(!expression.test(input)){
-        inputEmail.classList.add('error-state');
+        inputEmail.classList.add('input-error');
         errorPara.innerText = "Valid email required"
     } 
     else if(expression.test(input)) {
-        inputEmail.classList.remove('error-state');
+        inputEmail.classList.remove('input-error');
         errorPara.innerText = "";
     }
 }
@@ -51,7 +51,7 @@ form.addEventListener('submit', (e)=> {
     if(!inputEmail.value) {
         formValido = false;
        
-    } else if (inputEmail.classList.contains('error-state')) {
+    } else if (inputEmail.classList.contains('input-error')) {
         formValido = false;
     };
 

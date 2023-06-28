@@ -137,6 +137,14 @@ main {
   font-size: 1.6rem;
   outline: 1px solid #232742;
 }
+.sign-up-container__input .input-error {
+  background-color: #ffe8e6;
+  border: 1px solid #f09391;
+  color: #f09391;
+}
+.sign-up-container__input .input-error:focus {
+  outline: 1px #f09391 solid;
+}
 
 .success-container {
   display: grid;
@@ -211,7 +219,7 @@ main {
 .main-button {
   width: 100%;
   height: 60px;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   background-color: #232742;
   border-radius: 6px;
@@ -229,15 +237,6 @@ main {
 
 .inactive {
   display: none;
-}
-
-.error-state {
-  background-color: #ffe8e6;
-  border: 1px, solid #f09391;
-  color: #f09391;
-}
-.error-state:focus {
-  outline: 1px #f09391 solid;
 }
 
 /*# sourceMappingURL=style.css.map */

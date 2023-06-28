@@ -97,6 +97,14 @@
                 outline: 1px solid a.$secondary-color;
             }
         }
+        .input-error {
+            background-color: a.$error-state;
+            border: 1px solid a.$error-text;
+            color: a.$error-text;
+            &:focus {
+                outline: 1px a.$error-text solid;
+            }
+        }
     }
 }
 
