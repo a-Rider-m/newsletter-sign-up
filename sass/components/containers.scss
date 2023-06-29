@@ -58,6 +58,10 @@
             justify-content: center;
             justify-self: center;
         }
+        @include a.media-up(md){
+            max-width: 550px;
+            margin: 0 auto;
+        }
     }
     &__check-list {
         display: flex;
@@ -131,6 +135,11 @@
         padding: 50px;
         background-color: a.$light-color;
         border-radius: 30px;
+    }
+    @include a.media-up(md) {
+       max-width: 500px;
+       max-height: 70vh;
+       margin: auto;
     }
     &__info {
         display: flex;

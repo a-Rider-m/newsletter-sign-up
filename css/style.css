@@ -99,6 +99,12 @@ main {
     justify-self: center;
   }
 }
+@media screen and (min-width: 750px) {
+  .sign-up-container__container {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
 .sign-up-container__check-list {
   display: flex;
   gap: 15px;
@@ -171,6 +177,13 @@ main {
     padding: 50px;
     background-color: #ffffff;
     border-radius: 30px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .success-container {
+    max-width: 500px;
+    max-height: 70vh;
+    margin: auto;
   }
 }
 .success-container__info {

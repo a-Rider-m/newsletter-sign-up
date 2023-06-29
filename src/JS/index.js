@@ -1,13 +1,12 @@
 const signContainer = document.querySelector('.sign-up-container');
 const successContainer = document.querySelector('.success-container');
-
 const form = document.querySelector('.sign-up-container__input');
+const errorPara = document.querySelector('.sign-up-container__error-text');
+const inputEmail = document.querySelector("#email-input");
 
 const subsButton = document.querySelector('.main-button');
 const dismissButton = document.querySelector('.dismiss-button');
 
-const inputEmail = document.querySelector("#email-input");
-const errorPara = document.querySelector('.sign-up-container__error-text');
 const emailRegistered = document.querySelector('.email-registered');
 
 
@@ -42,6 +41,7 @@ function validateEmail() {
     }
 }
 
+//Prevenir envio de formulario
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
 
